@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    
+    <header>
+        <div class="inner">
+            <h1><img src="img/logo.png" alt="" /> to<span>do</span></h1>
+            <form id="new-task-form">
+                <input type="text" id="new-task-input" placeholder="New task..." />
+                <button id="new-task-add">
+                    <span>Add</span><img src="img/plus.png" alt="" />
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="inner">
+            <div class="count">
+                <div class="created">
+                    <p>Tasks created</p><span id="num-of-tasks">0</span>
+                </div>
+                <div class="completed">
+                    <p>Completed</p><span id="completed-tasks">0/0</span>
+                </div>
+            </div>
+
+            <div class="tasks-container">
+                <div class="item">
+                    <div class="left">
+                        <div class="check-task"></div>
+                    <div class="task-desc">
+                        <input type="text" class="text" value="MyNew Task" readonly>
+                    </div>
+                    </div>
+                    <div class="controls">
+                        <button class="edit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="m5 16l-1 4l4-1L19.586 7.414a2 2 0 0 0 0-2.828l-.172-.172a2 2 0 0 0-2.828 0zM15 6l3 3m-5 11h8" />
+                            </svg>
+                        </button>
+                        <button class="delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M7 21q-.825 0-1.412-.587T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413T17 21zM17 6H7v13h10zM9 17h2V8H9zm4 0h2V8h-2zM7 6v13z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
 </body>
+
 </html>

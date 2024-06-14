@@ -1,0 +1,204 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+
+
+:root{
+    --gray-100: #F2F2F2;
+    --gray-300: #808080;
+    --gray-400: #333333;
+    --gray-500: #262626;
+    --gray-600: #1A1A1A;
+    --gray-700: #0D0D0D;
+    --light-blue: #4EA8DE;
+    --dark-purple: #5E60CE;
+    --dark-blue: #1E6F9F;
+
+}
+
+html{
+    font-family: 'Inter';
+    scroll-behavior: smooth;
+}
+
+::placeholder, button, input, label{
+    font-family: 'Poppins';
+}
+input, button{
+    outline: none;
+    appearance: none;
+    border: none;
+    background: none;
+}
+
+button{
+    cursor: pointer;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--gray-100);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--gray-500);
+    border-radius: 20px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.inner{
+    width: min(50ch, 100% - 4rem);
+    margin-inline: auto;
+}
+
+header{
+    background-color: var(--gray-700);
+    padding: 2rem 0;
+    height: 25dvh;
+}
+
+header h1{
+    text-align: center;
+    color: var(--light-blue);
+    font-weight: 900;
+    font-size: 2rem;
+}
+header h1 img{
+    width: .8rem;
+}
+header h1 span{
+    color: var(--dark-purple);
+}
+
+header form{
+    display: flex;
+    gap: .2rem;
+    bottom: -.7rem;
+    width: 100%;
+    transform: translateY(3rem);
+}
+
+header form input{
+    width: 80%;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid var(--gray-400);
+    padding: 0 5px;
+    background: var(--gray-400);
+    color: var(--gray-100);
+    font-size: .7rem;
+}
+header form input::placeholder{
+    color: var(--gray-100);
+    font-weight: 100;
+}
+
+header form button{
+    width: 20%;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid var(--dark-blue);
+    padding: 0 5px;
+    background: var(--dark-blue);
+    color: var(--gray-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .6rem;
+    gap: 4px;
+}
+
+header form button img{
+    width: .7rem;
+}
+
+
+main{
+    background-color: var(--gray-600);
+    height: 75dvh;
+    padding: 2rem 0;
+}
+
+main .count{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+main .count .created{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+main .count .completed{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+main .count p{
+    font-size: .7rem;
+    font-weight: 500;
+    color: var(--light-blue);
+}
+main .count .completed p{
+    color: var(--dark-purple);
+}
+main .count span{
+    font-size: .7rem;
+    font-weight: 500;
+    color: var(--gray-100);
+    background: var(--gray-700);
+    width: max-content;
+    text-align: center;
+    padding: 2px .7rem;
+    border-radius: 10px;
+    font-size: .5rem;
+}
+
+.tasks-container .item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--gray-500);
+    padding: .5rem;
+    border-radius: 5px;
+}
+.tasks-container .item .left{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.check-task{
+    width: .7rem;
+    height: .7rem;
+    border: solid 1px var(--light-blue);
+    border-radius: 50%;
+}
+.task-desc{
+    display: flex;
+    align-items: center;
+}
+.task-desc .text{
+    color: var(--gray-100);
+    font-size: .7rem;
+}
+.task-desc .text:not(:read-only) {
+    color: var(--gray-100);
+}
+
+.tasks-container .item button svg{
+    color: var(--gray-100);
+    font-size: .7rem;
+}
+
+.tasks-container .item .controls{
+    display: flex;
+    gap: .5rem;
+}
