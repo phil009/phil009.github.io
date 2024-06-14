@@ -186,7 +186,7 @@ main .count span{
     align-items: center;
 }
 .task-desc .text{
-    color: var(--gray-100);
+    color: var(--light-blue);
     font-size: .7rem;
 }
 .task-desc .text:not(:read-only) {
@@ -201,4 +201,23 @@ main .count span{
 .tasks-container .item .controls{
     display: flex;
     gap: .5rem;
+}
+
+.empty-task-list{
+    text-align: center;
+    color: var(--gray-400);
+    padding-top: 3rem;
+    border-top: 1px solid var(--gray-400);
+}
+
+.empty-task-list svg{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.empty-task-list h4{
+    font-size: .7rem;
+}
+.empty-task-list p{
+    font-size: .5rem;
 }
