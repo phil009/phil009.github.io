@@ -32,7 +32,7 @@ window.addEventListener("load", () => {
 
         const taskDesc = document.createElement("div");
         taskDesc.classList.add("task-desc");
-        taskElement.appendChild(taskDesc);
+        leftSide.appendChild(taskDesc);
 
         const taskInput = document.createElement("input");
         taskInput.classList.add("text");
@@ -99,9 +99,13 @@ window.addEventListener("load", () => {
             checkTask.classList.toggle("complete");
             taskElement.classList.toggle("completed");
             if (taskElement.classList.contains("completed")) {
+                editBtn.style.display = 'none';
+                deleteBtn.style.display = 'none';
                 completedCount++;
             } else {
                 completedCount--;
+                editBtn.style.display = 'block';
+                deleteBtn.style.display = 'block';
             }
             updateTaskCounts();
         });
