@@ -151,7 +151,7 @@ main .count .completed p{
     color: var(--dark-purple);
 }
 main .count span{
-    font-size: .7rem;
+    font-size: .5rem;
     font-weight: 500;
     color: var(--gray-100);
     background: var(--gray-700);
@@ -159,7 +159,6 @@ main .count span{
     text-align: center;
     padding: 2px .7rem;
     border-radius: 10px;
-    font-size: .5rem;
 }
 
 .tasks-container .item{
@@ -233,4 +232,42 @@ main .count span{
 }
 .empty-task-list p{
     font-size: .5rem;
+}
+
+
+@media (min-width: 991px) {
+    header h1{
+        font-size: 3rem;
+    }
+    header h1 img{
+        width: 1.2rem;
+    }
+
+    
+main .count p{
+    font-size: 1rem;
+}
+
+main .count span{
+    font-size:.7rem;
+}
+
+.task-desc .text{
+    font-size: 1rem;
+}
+.tasks-container .item button svg{
+    font-size: 1rem;
+}
+
+.empty-task-list svg{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.empty-task-list h4{
+    font-size: 1rem;
+}
+.empty-task-list p{
+    font-size: .7rem;
+}
 }
