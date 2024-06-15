@@ -180,6 +180,10 @@ main .count span{
     height: .7rem;
     border: solid 1px var(--light-blue);
     border-radius: 50%;
+    cursor: pointer;
+}
+.check-task.complete{
+    background-color: var(--dark-blue);
 }
 .task-desc{
     display: flex;
@@ -189,10 +193,17 @@ main .count span{
     color: var(--light-blue);
     font-size: .7rem;
 }
+.task-desc .text.complete{
+    text-decoration: line-through;
+    color: var(--gray-100);
+    opacity: .5;
+}
 .task-desc .text:not(:read-only) {
     color: var(--gray-100);
 }
-
+.tasks-container .item button{
+    cursor: pointer;
+}
 .tasks-container .item button svg{
     color: var(--gray-100);
     font-size: .7rem;
