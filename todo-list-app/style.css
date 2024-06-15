@@ -169,6 +169,8 @@ main .count span{
     background-color: var(--gray-500);
     padding: .5rem;
     border-radius: 5px;
+    margin-bottom: .5rem;
+    box-shadow: 1px 1px 4px 2px var(--gray-600);
 }
 .tasks-container .item .left{
     display: flex;
