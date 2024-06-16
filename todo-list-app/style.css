@@ -3,7 +3,7 @@
 
 
 
-:root{
+:root {
     --gray-100: #F2F2F2;
     --gray-300: #808080;
     --gray-400: #333333;
@@ -16,65 +16,76 @@
 
 }
 
-html{
+html {
     font-family: 'Inter';
     scroll-behavior: smooth;
 }
 
-::placeholder, button, input, label{
+::placeholder,
+button,
+input,
+label {
     font-family: 'Poppins';
 }
-input, button{
+
+input,
+button {
     outline: none;
     appearance: none;
     border: none;
     background: none;
 }
 
-button{
+button {
     cursor: pointer;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 10px;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     background-color: var(--gray-100);
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: var(--gray-500);
     border-radius: 20px;
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.inner{
+.inner {
     width: min(50ch, 100% - 4rem);
     margin-inline: auto;
 }
 
-header{
+header {
     background-color: var(--gray-700);
     padding: 2rem 0;
     height: 25dvh;
 }
 
-header h1{
+header h1 {
     text-align: center;
     color: var(--light-blue);
     font-weight: 900;
     font-size: 2rem;
 }
-header h1 img{
+
+header h1 img {
     width: .8rem;
 }
-header h1 span{
+
+header h1 span {
     color: var(--dark-purple);
 }
 
-header form{
+header form {
     display: flex;
     gap: .2rem;
     bottom: -.7rem;
@@ -82,7 +93,7 @@ header form{
     transform: translateY(3rem);
 }
 
-header form input{
+header form input {
     width: 80%;
     height: 2rem;
     border-radius: 5px;
@@ -92,12 +103,13 @@ header form input{
     color: var(--gray-100);
     font-size: .7rem;
 }
-header form input::placeholder{
+
+header form input::placeholder {
     color: var(--gray-100);
     font-weight: 100;
 }
 
-header form button{
+header form button {
     width: 20%;
     height: 2rem;
     border-radius: 5px;
@@ -112,45 +124,47 @@ header form button{
     gap: 4px;
 }
 
-header form button img{
+header form button img {
     width: .7rem;
 }
 
 
-main{
+main {
     background-color: var(--gray-600);
     height: 75dvh;
     padding: 2rem 0;
 }
 
-main .count{
+main .count {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
 }
 
-main .count .created{
+main .count .created {
     display: flex;
     gap: 3px;
     align-items: center;
 }
 
-main .count .completed{
+main .count .completed {
     display: flex;
     gap: 3px;
     align-items: center;
 }
 
-main .count p{
+main .count p {
     font-size: .7rem;
     font-weight: 500;
     color: var(--light-blue);
 }
-main .count .completed p{
+
+main .count .completed p {
     color: var(--dark-purple);
 }
-main .count span{
+
+main .count span {
     font-size: .5rem;
     font-weight: 500;
     color: var(--gray-100);
@@ -161,7 +175,7 @@ main .count span{
     border-radius: 10px;
 }
 
-.tasks-container .item{
+.tasks-container .item {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -171,103 +185,116 @@ main .count span{
     margin-bottom: .5rem;
     box-shadow: 1px 1px 4px 2px var(--gray-600);
 }
-.tasks-container .item .left{
+
+.tasks-container .item .left {
     display: flex;
     align-items: center;
     gap: .5rem;
 }
-.check-task{
+
+.check-task {
     width: .7rem;
     height: .7rem;
     border: solid 1px var(--light-blue);
     border-radius: 50%;
     cursor: pointer;
 }
-.check-task.complete{
+
+.check-task.complete {
     background-color: var(--dark-blue);
 }
-.task-desc{
+
+.task-desc {
     display: flex;
     align-items: center;
 }
-.task-desc .text{
+
+.task-desc .text {
     color: var(--light-blue);
     font-size: .7rem;
 }
-.task-desc .text.complete{
+
+.task-desc .text.complete {
     text-decoration: line-through;
     color: var(--gray-100);
     opacity: .5;
 }
+
 .task-desc .text:not(:read-only) {
     color: var(--gray-100);
 }
-.tasks-container .item button{
+
+.tasks-container .item button {
     cursor: pointer;
 }
-.tasks-container .item button svg{
+
+.tasks-container .item button svg {
     color: var(--gray-100);
     font-size: .7rem;
 }
 
-.tasks-container .item .controls{
+.tasks-container .item .controls {
     display: flex;
     gap: .5rem;
 }
 
-.empty-task-list{
+.empty-task-list {
     text-align: center;
     color: var(--gray-400);
     padding-top: 3rem;
     border-top: 1px solid var(--gray-400);
 }
 
-.empty-task-list svg{
+.empty-task-list svg {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.empty-task-list h4{
+.empty-task-list h4 {
     font-size: .7rem;
 }
-.empty-task-list p{
+
+.empty-task-list p {
     font-size: .5rem;
 }
 
 
 @media (min-width: 991px) {
-    header h1{
+    header h1 {
         font-size: 3rem;
     }
-    header h1 img{
+
+    header h1 img {
         width: 1.2rem;
     }
 
-    
-main .count p{
-    font-size: 1rem;
-}
 
-main .count span{
-    font-size:.7rem;
-}
+    main .count p {
+        font-size: 1rem;
+    }
 
-.task-desc .text{
-    font-size: 1rem;
-}
-.tasks-container .item button svg{
-    font-size: 1rem;
-}
+    main .count span {
+        font-size: .7rem;
+    }
 
-.empty-task-list svg{
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
+    .task-desc .text {
+        font-size: 1rem;
+    }
 
-.empty-task-list h4{
-    font-size: 1rem;
-}
-.empty-task-list p{
-    font-size: .7rem;
-}
+    .tasks-container .item button svg {
+        font-size: 1rem;
+    }
+
+    .empty-task-list svg {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .empty-task-list h4 {
+        font-size: 1rem;
+    }
+
+    .empty-task-list p {
+        font-size: .7rem;
+    }
 }

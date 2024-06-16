@@ -1,0 +1,126 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+
+
+:root {
+    --gray-100: #F2F2F2;
+    --gray-300: #808080;
+    --gray-400: #333333;
+    --gray-500: #262626;
+    --gray-600: #1A1A1A;
+    --gray-700: #0D0D0D;
+    --light-blue: #4EA8DE;
+    --dark-purple: #5E60CE;
+    --dark-blue: #1E6F9F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Inter';
+}
+
+body {
+    background: var(--gray-700);
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background-color: var(--gray-700);
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-inline: auto;
+    max-width: 300px;
+    height: 100%;
+}
+
+.calculator .display {
+    height: 35dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    padding: 1rem 0;
+}
+.calculator .display .nav {
+    display: flex;
+    gap: .5rem;
+}
+.calculator .display .nav a{
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    appearance: none;
+    background: none;
+    border: none;
+    color: var(--gray-300);
+    transition: all .3s ease;
+}
+.calculator .display .nav a:hover{
+    color: var(--gray-100);
+}
+.calculator .display input {
+    outline: none;
+    appearance: none;
+    background: none;
+    border: none;
+    color: var(--dark-purple);
+    font-size: 2rem;
+    height: 25dvh;
+    width: 100%;
+    padding: .3rem;
+    text-align: end;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-items: center;
+}
+
+.buttons button {
+    width: 3rem;
+    height: 3rem;
+    outline: none;
+    appearance: none;
+    background: var(--gray-600);
+    border: none;
+    color: var(--gray-100);
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.buttons button:hover {
+    background: var(--gray-500);
+}
+
+.buttons button:active {
+    background: var(--gray-400);
+}
+
+.buttons button.operator {
+    color: var(--dark-blue);
+}
+
+.buttons button.clear,
+.buttons button.backspace {
+    color: rgb(197, 13, 13);
+}
