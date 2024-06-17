@@ -21,10 +21,15 @@ function calculate() {
 }
 
 function sanitizeInput(input) {
-    // Replace leading zeroes in numbers with a single zero
-    return input
-        .replace(/(^|[^0-9])0+([0-9])/g, "$1$2") //The regular expression \b0+(\d) matches leading zeroes (0+) followed by a digit (\d) at a word boundary (\b). The $1 in the replacement string ensures that the digit after the leading zeroes is retained.
-        .replace(/[^0-9+\-*/.()]/g, ""); //Another regular expression [^0-9+\-*/.()] matches any character that is not a digit, operator, decimal point, or parentheses, and removes it.
+    // Remove leading zeroes in numbers
+    input = input.replace(/\b0+(\d)/g, '$1');
+    // Replace percentages with their decimal equivalents
+    input = input.replace(/(\d+(\.\d+)?)%/g, (match, p1) => {
+        return parseFloat(p1) / 100;
+    });
+    // Ensure the input only contains valid characters
+    input = input.replace(/[^0-9+\-*/.()]/g, "");
+    return input;
 }
 
 const backSpace = document.getElementById("backspace");
