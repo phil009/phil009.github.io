@@ -31,7 +31,9 @@ function sanitizeInput(input) {
     input = input.replace(/[^0-9+\-*/.()]/g, "");
     return input;
 }
-
+display.addEventListener("input", (e) => {
+    e.target.value = sanitizeInput(e.target.value);
+});
 const backSpace = document.getElementById("backspace");
 backSpace.addEventListener("click", () => {
     if (display.value.length > 1) {

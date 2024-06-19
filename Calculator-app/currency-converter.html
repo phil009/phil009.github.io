@@ -47,12 +47,12 @@
             </div>
             <div class="input">
                 <div class="fromCurrency">
-                    <select name="currency-from" id="currency-from"></select>
+                    <button class="currency-from" id="currency-from"></button>
                     <!-- <img src="" alt="" class="currency-logo"> -->
                     <input id="fromCurrencyInput">
                 </div>
                 <div class="toCurrency">
-                    <select name="currency-to" id="currency-to"></select>
+                    <button class="currency-to" id="currency-to"></button>
                     <!-- <img src="" alt="" class="currency-logo"> -->
                     <input id="toCurrencyInput">
                 </div>
@@ -73,7 +73,6 @@
                 <button onclick="appendToDisplay('0')" class="btn" data-value=" 0">0</button>
                 <button onclick="appendToDisplay('.')" class="btn" data-value=".">.</button>
             </div>
-
             <div class="clearing">
                 <button onclick="clearDisplay()" class="btn clear" id="clear">C</button>
                 <button class="btn backspace" id="backspace">
@@ -84,9 +83,14 @@
                 </button>
             </div>
         </div>
+
+        <div class="drawer" id="drawer">
+
+        </div>
+        
     </div>
     <script src="./assets/js/currencyConverter.js"></script>
-    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/app.js"></script>
     <script src="./assets/js/countryCodes.js"></script>
 </body>
 
