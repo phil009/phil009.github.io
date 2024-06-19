@@ -47,14 +47,14 @@
             </div>
             <div class="input">
                 <div class="fromCurrency">
-                    <button class="currency-from" id="currency-from"></button>
+                    <select name="currency-from" id="currency-from"></select>
                     <!-- <img src="" alt="" class="currency-logo"> -->
-                    <input id="fromCurrencyInput">
+                    <input type="number" id="fromCurrencyInput">
                 </div>
                 <div class="toCurrency">
-                    <button class="currency-to" id="currency-to"></button>
+                    <select name="currency-to" id="currency-to"></select>
                     <!-- <img src="" alt="" class="currency-logo"> -->
-                    <input id="toCurrencyInput">
+                    <input type="number" id="toCurrencyInput" readonly>
                 </div>
             </div>
         </div>
@@ -83,14 +83,9 @@
                 </button>
             </div>
         </div>
-
-        <div class="drawer" id="drawer">
-
-        </div>
         
     </div>
-    <script src="./assets/js/currencyConverter.js"></script>
-    <script src="./assets/js/app.js"></script>
+    <script type="module" src="./assets/js/currencyConverter.js"></script>
     <script src="./assets/js/countryCodes.js"></script>
 </body>
 

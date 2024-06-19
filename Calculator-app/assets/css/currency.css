@@ -84,16 +84,29 @@ body {
     flex-direction: column;
     gap: 1rem;
 }
+.currencyConverter .display input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    appearance: none;
+}
 .currencyConverter .display .input select{
     background: none;
     outline: none;
-    width: 20%;
     height: 100%;
     border: none;
     border-right: dashed 1px var(--gray-400);
     color: var(--gray-300);
+    background: var(--gray-700);
+    border-radius: 5px;
 }
 
+.currencyConverter .display .input select::-webkit-scrollbar{
+    width: 5px;
+    background: var(--gray-700);
+}
+.currencyConverter .display .input select::-webkit-scrollbar-thumb{
+    background: var(--gray-300);
+    border-radius: 5px;
+}
 .currencyConverter .display .input div{
     border: solid 1px var(--gray-400);
     height: 3rem;
@@ -107,13 +120,22 @@ body {
     appearance: none;
     background: none;
     border: none;
-    color: var(--dark-blue);
+    color: var(--gray-300);
     font-size: 1.5rem;
     height: 3rem;
     width: 100%;
     padding: .3rem;
     text-align: end;
 }
+
+
+
+
+
+
+
+
+
 
 .buttons {
     display: flex;
