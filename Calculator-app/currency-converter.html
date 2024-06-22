@@ -10,6 +10,47 @@
 
 <body>
     <div class="currencyConverter">
+        <div class="nav">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M5.079 5.069c3.795-3.79 9.965-3.75 13.783.069c3.82 3.82 3.86 9.993.064 13.788c-3.795 3.795-9.968 3.756-13.788-.064a9.812 9.812 0 0 1-2.798-8.28a.75.75 0 1 1 1.487.203a8.312 8.312 0 0 0 2.371 7.017c3.245 3.244 8.468 3.263 11.668.064c3.199-3.2 3.18-8.423-.064-11.668c-3.243-3.242-8.463-3.263-11.663-.068l.748.003a.75.75 0 1 1-.007 1.5l-2.546-.012a.75.75 0 0 1-.746-.747L3.575 4.33a.75.75 0 1 1 1.5-.008zm6.92 2.18a.75.75 0 0 1 .75.75v3.69l2.281 2.28a.75.75 0 1 1-1.06 1.061l-2.72-2.72V8a.75.75 0 0 1 .75-.75"
+                        clip-rule="evenodd" />
+                </svg>
+            </a>
+            <div>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"
+                            d="M22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464c.974.974 1.3 2.343 1.41 4.536M18 8.5h-4m4 6h-4m4 3h-4m-4-9H8m0 0H6m2 0v-2m0 2v2m1.5 4L8 16m0 0l-1.5 1.5M8 16l-1.5-1.5M8 16l1.5 1.5" />
+                    </svg>
+                </a>
+                <a class="current" href="currency-converter.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="4">
+                            <path d="m19 16l5 6l5-6" />
+                            <path
+                                d="M9 14s7.5-11.5 20.5-7S42 24.5 42 24.5M39 34s-6 11-19.5 7.5S6 24 6 24M42 8v16M6 24v16m12-12h12m-12-6h12m-6 0v12" />
+                        </g>
+                    </svg>
+                </a>
+                <a href="unit-converter.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100">
+                        <path fill="currentColor"
+                            d="M2.063 51.733a4.127 4.127 0 0 0-1.51 5.637l18.34 31.768a4.127 4.127 0 0 0 5.638 1.51l73.406-42.38a4.127 4.127 0 0 0 1.51-5.638l-18.34-31.768a4.127 4.127 0 0 0-5.638-1.51Zm7.701 5.084l66.258-38.254l14.214 24.62l-4.775 2.757l-5.327-9.229l-3.574 2.064l5.327 9.228l-5.465 3.156l-5.328-9.229l-3.574 2.064l5.328 9.228l-5.459 3.152l-5.328-9.229l-3.574 2.064l5.328 9.228l-5.465 3.156l-7.404-12.823l-3.574 2.063l7.404 12.823l-5.466 3.156l-5.328-9.229l-3.574 2.064l5.328 9.228l-5.459 3.151l-5.327-9.228l-3.574 2.064l5.327 9.228l-5.465 3.155l-5.328-9.228l-3.574 2.064l5.328 9.228l-3.686 2.128z"
+                            color="currentColor" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="history">
+            <ul class="history-items" id="history-items">
+                <li class="entry">
+
+                </li>
+            </ul>
+        </div>
         <div class="display">
             <div class="nav">
                 <a href="#">
@@ -83,7 +124,6 @@
                 </button>
             </div>
         </div>
-        
     </div>
     <script type="module" src="./assets/js/currencyConverter.js"></script>
     <script src="./assets/js/countryCodes.js"></script>
