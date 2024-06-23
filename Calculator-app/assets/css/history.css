@@ -1,0 +1,66 @@
+.history{
+    position: absolute;
+    height: 100dvh;
+    width: 50%;
+    background-color: var(--gray-700);
+    width: 200px;
+    padding: 1rem 0;
+    transform: scaleX(0);
+    transition: transform .4s ease-in-out;
+    transform-origin: left;
+}
+
+.history.open{
+    transform: scale(1);
+}
+
+.history .nav {
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+}
+.history .nav div{
+    display: flex;
+    gap: .5rem;
+}
+.history .nav a{
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    appearance: none;
+    background: none;
+    border: none;
+    color: var(--gray-300);
+    transition: all .3s ease;
+}
+.history .nav a.current{
+    color: var(--gray-100);
+}
+.history .nav a:hover{
+    color: var(--gray-100);
+}
+.history input {
+    outline: none;
+    appearance: none;
+    background: none;
+    border: none;
+    color: var(--dark-purple);
+    font-size: 2rem;
+    height: 25dvh;
+    width: 100%;
+    padding: .3rem;
+    text-align: end;
+}
+
+.history-items{
+    list-style: none;
+    text-align: end;
+}
+.entry{
+    font-size: 1.2rem;
+    color: var(--gray-300);
+}

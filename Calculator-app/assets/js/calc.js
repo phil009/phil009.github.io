@@ -11,7 +11,10 @@ function clearDisplay() {
 function calculate() {
     try {
         let sanitizedInput = sanitizeInput(display.value);
+        addToHistory();
         display.value = eval(sanitizedInput);
+        addToHistory();
+        
     } catch (error) {
         display.value = "Error";
         setTimeout(() => {
@@ -19,7 +22,15 @@ function calculate() {
         }, 3000);
     }
 }
-
+function addToHistory () {
+    const sanitizedInput = sanitizeInput(display.value);
+    const content = `${sanitizedInput} <br>`
+    const historyList = document.getElementById('history-items');
+    const entry = document.createElement('li');
+    entry.innerHTML = content;
+    entry.classList.add('entry');
+    historyList.appendChild(entry);
+}
 function sanitizeInput(input) {
     // Remove leading zeroes in numbers
     input = input.replace(/\b0+(\d)/g, '$1');
@@ -41,4 +52,17 @@ backSpace.addEventListener("click", () => {
     } else {
         display.value = "";
     }
+});
+
+
+const closeHistory = document.getElementById('close-history');
+const openHistory = document.getElementById('open-history');
+const history = document.querySelector('.history');
+
+openHistory.addEventListener('click', () => {
+    history.classList.add('open');
+});
+
+closeHistory.addEventListener('click', () => {
+    history.classList.remove('open');
 });
