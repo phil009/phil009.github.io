@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.inner {
+    width: min(100ch, calc(100% - 2rem));
+    margin-inline: auto;
+  }
